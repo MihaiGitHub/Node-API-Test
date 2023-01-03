@@ -1,16 +1,22 @@
 {
-  "name": "Node-API-Test",
+  "name": "zoner-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Middle layer for Zoner progressive web application",
   "main": "index.js",
-  "type": "module",
   "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "TemplarIT",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "nodemon": "^2.0.2"
   }
 }
