@@ -1,5 +1,5 @@
 import express from "express";
-import agentsRouter from "./routers/agents";
+import router from "./routers/agents";
 //const agentsRouter = require("./routers/agents");
 const app = express();
 
@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 //app.use(propertiesRouter);
-app.use(agentsRouter);
+app.use(router);
 
 app.listen(5001, () => console.log("Api running on port 5001"));
 
