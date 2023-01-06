@@ -2,6 +2,7 @@ const { Sequelize, Model, DataTypes } = require("sequelize");
 const sequelize = new Sequelize("real_estate", "root", "Dumbbell_007", {
   host: "localhost",
   dialect: "mysql",
+  dialectModule: require("mysql2"),
 });
 
 class User extends Model {}
