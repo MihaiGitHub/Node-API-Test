@@ -1,5 +1,6 @@
 import express from "express";
-const agentsRouter = require("./routers/agents");
+import agentsRouter from "./routers/agents";
+//const agentsRouter = require("./routers/agents");
 const app = express();
 
 // Automatically parse data as a JSON object in all request handlers
