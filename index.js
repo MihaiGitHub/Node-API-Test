@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 
 ///////////////////////////////////////////
-const router = new express.Router();
+//const router = new express.Router();
 const {
   //agentById, read,
   list,
@@ -19,7 +19,7 @@ const {
 // routes
 //router.post("/agent/:agentId/message", saveMessage);
 //router.get("/agent/:agentId", read);
-router.get("/agents", list);
+app.get("/agents", list);
 ////////////////////////////////////////////////
 
 // Automatically parse data as a JSON object in all request handlers
