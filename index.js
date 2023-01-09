@@ -28,10 +28,8 @@ app.use(express.json());
 //app.use(propertiesRouter);
 //app.use(agentsRouter);
 
-app.listen(5001, () => console.log("Api running on port 5001"));
+app.listen(5001, () => console.log("Api running on port 5001", process));
 
 app.get("/", (req, res) =>
-  res.json({
-    message: "Real estate API running!",
-  })
+  res.json("Real estate API running!");
 );
