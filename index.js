@@ -30,6 +30,4 @@ app.use(express.json());
 
 app.listen(5001, () => console.log("Api running on port 5001", process));
 
-app.get("/", (req, res) =>
-  res.json("Real estate API running!");
-);
+app.get("/", (req, res) => res.json("Real estate API running!"));
