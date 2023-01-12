@@ -1,6 +1,4 @@
-//import express from "express";
 const express = require("express");
-//import router from "./routers/agents";
 const agentsRouter = require("./routers/agents");
 const app = express();
 

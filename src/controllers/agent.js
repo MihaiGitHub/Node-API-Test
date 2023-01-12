@@ -1,5 +1,4 @@
 const User = require("../models/user");
-//import User from "../models/user";
 //const Message = require("../models/message");
 
 // middleware for adding agent to request
