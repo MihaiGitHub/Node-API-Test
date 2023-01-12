@@ -34,26 +34,27 @@ exports.list = async (req, res) => {
   }
 };
 
-// // save agent message
-// exports.saveMessage = async (req, res) => {
-//   const { uid, message } = req.body;
+// save agent message
+exports.saveMessage = async (req, res) => {
+  const { uid, message } = req.body;
 
-//   if (!message) {
-//     return res.status(400).json({
-//       error: "A message is required!",
-//     });
-//   }
+  if (!message) {
+    return res.status(400).json({
+      error: "A message is required!",
+    });
+  }
 
-//   try {
-//     const msg = await Message.create({
-//       uid,
-//       subject: "Message from mobile app",
-//       message,
-//       type: "Incoming",
-//     });
+  try {
+    // const msg = await Message.create({
+    //   uid,
+    //   subject: "Message from mobile app",
+    //   message,
+    //   type: "Incoming",
+    // });
 
-//     res.status(200).json(msg);
-//   } catch (e) {
-//     res.status(400).send(e);
-//   }
-// };
+    // res.status(200).json(msg);
+    res.status(200).send("Message");
+  } catch (e) {
+    res.status(400).send(e);
+  }
+};
