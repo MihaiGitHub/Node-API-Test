@@ -10,7 +10,7 @@ const {
   //agentById, read,
   list,
   //saveMessage
-} = require("./src/controllers/agent");
+} = require("./controllers/agent");
 
 // middleware
 // anytime there is a userId param in the route execute agentById method
