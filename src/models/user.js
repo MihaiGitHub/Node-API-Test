@@ -4,31 +4,57 @@ const sequelize = new Sequelize("realestate", "root", "MyNewPass1!", {
   dialect: "mysql",
 });
 
-class User extends Model {}
-User.init(
-  {
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    type: DataTypes.STRING,
-    validated: DataTypes.INTEGER,
-    fname: DataTypes.STRING,
-    lname: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    picture: DataTypes.STRING,
-    location: DataTypes.STRING,
-    lat: DataTypes.STRING,
-    lng: DataTypes.STRING,
-    phone: DataTypes.STRING,
-    fax: DataTypes.STRING,
-    license_number: DataTypes.STRING,
-    business_name: DataTypes.STRING,
-    timestamp: DataTypes.DATE,
+const User = sequelize.define("users", {
+  email: {
+    type: Sequelize.STRING,
   },
-  {
-    sequelize,
-    modelName: "user",
-    tableName: "users",
-  }
-);
+  password: {
+    type: Sequelize.STRING,
+  },
+  type: {
+    type: Sequelize.STRING,
+  },
+  validated: {
+    type: Sequelize.INTEGER,
+  },
+  fname: {
+    type: Sequelize.STRING,
+  },
+  lname: {
+    type: Sequelize.STRING,
+  },
+  description: {
+    type: Sequelize.TEXT,
+  },
+  picture: {
+    type: Sequelize.STRING,
+  },
+  location: {
+    type: Sequelize.STRING,
+  },
+  lat: {
+    type: Sequelize.STRING,
+  },
+  lng: {
+    type: Sequelize.STRING,
+  },
+  phone: {
+    type: Sequelize.STRING,
+  },
+  fax: {
+    type: Sequelize.STRING,
+  },
+  license_number: {
+    type: Sequelize.STRING,
+  },
+  business_name: {
+    type: Sequelize.STRING,
+  },
+  timestamp: {
+    type: Sequelize.DATE,
+  },
+});
+
+User.sync();
 
 module.exports = User;
