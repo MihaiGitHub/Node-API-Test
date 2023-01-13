@@ -13,6 +13,33 @@ const sequelize = new Sequelize("realestate", "root", "MyNewPass1!", {
   dialect: "mysql",
 });
 
+const Message = sequelize.define("messages", {
+  uid: {
+    type: Sequelize.INTEGER,
+  },
+  name: {
+    type: Sequelize.STRING,
+  },
+  subject: {
+    type: Sequelize.STRING,
+  },
+  email: {
+    type: Sequelize.STRING,
+  },
+  phone: {
+    type: Sequelize.STRING,
+  },
+  message: {
+    type: Sequelize.STRING,
+  },
+  type: {
+    type: Sequelize.STRING,
+  },
+});
+
+Message.sync();
+
+/*
 class Message extends Model {}
 
 Message.init(
@@ -31,5 +58,6 @@ Message.init(
     tableName: "messages",
   }
 );
+*/
 
 module.exports = Message;

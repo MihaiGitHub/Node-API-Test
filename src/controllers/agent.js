@@ -45,10 +45,17 @@ exports.saveMessage = async (req, res) => {
   }
 
   try {
+    // const msg = await Message.create({
+    //   uid,
+    //   subject: "Message from mobile app",
+    //   message,
+    //   type: "Incoming",
+    // });
+
     const msg = await Message.create({
-      uid,
+      uid: 61,
       subject: "Message from mobile app",
-      message,
+      message: "testing",
       type: "Incoming",
     });
 
