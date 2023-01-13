@@ -1,5 +1,5 @@
 const User = require("../models/user");
-//const Message = require("../models/message");
+const Message = require("../models/message");
 
 // middleware for adding agent to request
 exports.agentById = async (req, res, next, id) => {
@@ -45,15 +45,14 @@ exports.saveMessage = async (req, res) => {
   }
 
   try {
-    // const msg = await Message.create({
-    //   uid,
-    //   subject: "Message from mobile app",
-    //   message,
-    //   type: "Incoming",
-    // });
+    const msg = await Message.create({
+      uid,
+      subject: "Message from mobile app",
+      message,
+      type: "Incoming",
+    });
 
-    // res.status(200).json(msg);
-    res.status(200).send("Message");
+    res.status(200).json(msg);
   } catch (e) {
     res.status(400).send(e);
   }
