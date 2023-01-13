@@ -39,25 +39,4 @@ const Message = sequelize.define("messages", {
 
 Message.sync();
 
-/*
-class Message extends Model {}
-
-Message.init(
-  {
-    uid: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    subject: DataTypes.STRING,
-    email: DataTypes.STRING,
-    phone: DataTypes.STRING,
-    message: DataTypes.STRING,
-    type: DataTypes.STRING,
-  },
-  {
-    sequelize,
-    modelName: "Message",
-    tableName: "messages",
-  }
-);
-*/
-
 module.exports = Message;
